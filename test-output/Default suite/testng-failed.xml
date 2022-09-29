@@ -5,7 +5,7 @@
     <classes>
       <class name="test.APITesting">
         <methods>
-          <include name="getBookDetails"/>
+          <include name="POJOTest2"/>
         </methods>
       </class> <!-- test.APITesting -->
     </classes>

@@ -1,7 +1,11 @@
 package test;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map.Entry;
 
 import org.json.simple.JSONObject;
@@ -12,6 +16,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.google.common.io.Files;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -125,54 +130,96 @@ public class APITesting {
 	    System.out.println("Status code is : "+statuscode);
 	    Assert.assertEquals(statuscode,204);
 	}
-	
-	
-	
-	
-	@Test(priority = 6)
-	public void POJOTest() throws JsonProcessingException
+	 
+	@Test(priority = 0)
+	public void POJOTest2() throws IOException
 	{
-
-		ObjectMapper objectMapper = new ObjectMapper();
-	
-		ObjectNode bakeryitems = objectMapper.createObjectNode();
+	    ObjectMapper objectMapper = new ObjectMapper();
+		   
+		BakeryItems bakeryitems = new BakeryItems();
 		
-	
-		bakeryitems.put("id", 0001);
-		bakeryitems.put("type", "donut");
-		bakeryitems.put("name", "Cake");
-		bakeryitems.put("ppu", 0.55);
+		Batter batter = new Batter();
+		Batter batter2 = new Batter();
+		Batter batter3 = new Batter();
+		Batter batter4 = new Batter();
 		
-		ObjectNode battersdetails = objectMapper.createObjectNode();
+		Topping topping1 = new Topping();
+		Topping topping2 = new Topping();
+		Topping topping3 = new Topping();
+		Topping topping4= new Topping();
+		Topping topping5 = new Topping();
+		Topping topping6 = new Topping();
+		Topping topping7 = new Topping();
 		
-		ObjectNode batterdetails = objectMapper.createObjectNode();
+		bakeryitems.setId(0001);
+		bakeryitems.setType("donut");
+		bakeryitems.setName("Cake");
+		bakeryitems.setPPU(0.55);
 		
+		batter.setId(1001);
+		batter.setType("Regular");
 		
+		batter2.setId(1002);
+		batter2.setType("Chocolate");
 		
-		batterdetails.put("id", 1001);
-		batterdetails.put("type", "Regular");
+		batter3.setId(1003);
+		batter3.setType("Blueberry");
 		
-		batterdetails.put("id", 1002);
-		batterdetails.put("type", "Chocolate");
-		
-		
-	  //  bakeryitems.set("batters", );
-		bakeryitems.set("batter", batterdetails);
-		
-		
-		
-		
-		
-		String createpojoobject = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bakeryitems);
-		System.out.println("Created POJO Object is : \n"+ createpojoobject);
-		
-	
+		batter4.setId(1004);
+		batter4.setType("Devil's Food");
 	
 		
+		topping1.setId(5001);
+		topping1.setType("None");
+		
+		topping2.setId(5002);
+		topping2.setType("Glazed");
+		
+		topping3.setId(5003);
+		topping3.setType("Chocolate");
+		
+		topping4.setId(5004);
+		topping4.setType("Maple");
+		
+		topping5.setId(5005);
+		topping5.setType("Sugar");
+		
+		topping6.setId(5006);
+		topping6.setType("Chocolate with Sprinkles");
+		
+		topping7.setId(5007);
+		topping7.setType("Powdered Sugar");
+		
+		List<Batter> batters=new ArrayList();
+		batters.add(batter);
+		batters.add(batter2);
+		batters.add(batter3);
+		batters.add(batter4);
+		
+		List<Topping> toppings=new ArrayList();
+		toppings.add(topping1);
+		toppings.add(topping2);
+		toppings.add(topping3);
+		toppings.add(topping4);
+		toppings.add(topping5);
+		toppings.add(topping6);
+		toppings.add(topping7);
+		
+		
+		bakeryitems.setBatter(batters);
+		bakeryitems.setTopping(toppings);
+		System.out.println("Before step of Body response is printed");
 	
+		String bakeryitemsresponse = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bakeryitems);
+		System.out.println("Created POJO Object is : \n"+ bakeryitemsresponse);
+		
+		byte[] responseAsStringByte=bakeryitemsresponse.getBytes();
+		File bakeryitemsjsonfile=new File("./output/Bakery_Items.json");
+		
+		Files.write(responseAsStringByte, bakeryitemsjsonfile);
+		
+		
 	}
- 
-
 	
 	
 	
