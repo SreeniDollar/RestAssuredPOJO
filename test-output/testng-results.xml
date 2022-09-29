@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-29T11:29:22Z" name="Default suite" finished-at="2022-09-29T11:29:28Z" duration-ms="5847">
+  <suite started-at="2022-09-29T11:47:55Z" name="Default suite" finished-at="2022-09-29T11:48:00Z" duration-ms="5399">
     <groups>
     </groups>
-    <test started-at="2022-09-29T11:29:22Z" name="Default test" finished-at="2022-09-29T11:29:28Z" duration-ms="5847">
+    <test started-at="2022-09-29T11:47:55Z" name="Default test" finished-at="2022-09-29T11:48:00Z" duration-ms="5399">
       <class name="test.APITesting">
-        <test-method signature="POJOTest2()[pri:0, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:22Z" name="POJOTest2" finished-at="2022-09-29T11:29:23Z" duration-ms="458" status="PASS">
+        <test-method signature="POJOTest2()[pri:0, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:55Z" name="POJOTest2" finished-at="2022-09-29T11:47:55Z" duration-ms="389" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- POJOTest2 -->
-        <test-method signature="getMehod()[pri:1, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:23Z" name="getMehod" finished-at="2022-09-29T11:29:25Z" duration-ms="2456" status="PASS">
+        <test-method signature="getMehod()[pri:1, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:55Z" name="getMehod" finished-at="2022-09-29T11:47:57Z" duration-ms="2356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getMehod -->
-        <test-method signature="postMethod()[pri:2, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:25Z" name="postMethod" finished-at="2022-09-29T11:29:26Z" duration-ms="791" status="PASS">
+        <test-method signature="postMethod()[pri:2, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:57Z" name="postMethod" finished-at="2022-09-29T11:47:58Z" duration-ms="757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postMethod -->
-        <test-method signature="putMethod()[pri:3, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:26Z" name="putMethod" finished-at="2022-09-29T11:29:27Z" duration-ms="662" status="PASS">
+        <test-method signature="putMethod()[pri:3, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:58Z" name="putMethod" finished-at="2022-09-29T11:47:59Z" duration-ms="598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- putMethod -->
-        <test-method signature="patchMethod()[pri:4, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:27Z" name="patchMethod" finished-at="2022-09-29T11:29:28Z" duration-ms="704" status="PASS">
+        <test-method signature="patchMethod()[pri:4, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:59Z" name="patchMethod" finished-at="2022-09-29T11:47:59Z" duration-ms="661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- patchMethod -->
-        <test-method signature="deleteMethod()[pri:5, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:29:28Z" name="deleteMethod" finished-at="2022-09-29T11:29:28Z" duration-ms="708" status="PASS">
+        <test-method signature="deleteMethod()[pri:5, instance:test.APITesting@82ea68c]" started-at="2022-09-29T11:47:59Z" name="deleteMethod" finished-at="2022-09-29T11:48:00Z" duration-ms="572" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteMethod -->

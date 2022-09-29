@@ -132,7 +132,7 @@ public class APITesting {
 	}
 	 
 	@Test(priority = 0)
-	public void POJOTest2() throws IOException
+	public void POJOTest() throws IOException
 	{
 	    ObjectMapper objectMapper = new ObjectMapper();
 		   
@@ -208,10 +208,9 @@ public class APITesting {
 		
 		bakeryitems.setBatter(batters);
 		bakeryitems.setTopping(toppings);
-		System.out.println("Before step of Body response is printed");
-	
+			
 		String bakeryitemsresponse = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bakeryitems);
-		System.out.println("Created POJO Object is : \n"+ bakeryitemsresponse);
+		System.out.println("BakeryItems details in Json format is : \n"+ bakeryitemsresponse);
 		
 		byte[] responseAsStringByte=bakeryitemsresponse.getBytes();
 		File bakeryitemsjsonfile=new File("./output/Bakery_Items.json");
